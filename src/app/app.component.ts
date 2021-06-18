@@ -53,4 +53,15 @@ export class AppComponent {
       started: new Date(15, 1, 2017)
     });
   }
+  onSortServers() {
+    this.servers.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1
+      }
+      return 0;
+    });
+  }
 }
